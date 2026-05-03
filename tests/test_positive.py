@@ -25,7 +25,7 @@ def test_login(get_driver, Username, Password):
 
     time.sleep(2)
 
-    # ❗ Handle expected outcomes properly
+    #  Handle expected outcomes properly
     if Username == "locked_out_user":
         error = driver.find_element(By.CSS_SELECTOR, "h3[data-test='error']")
         assert "locked out" in error.text.lower()
